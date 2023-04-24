@@ -22,7 +22,7 @@ function myFace(leftC,rightC,nose) {
 strokeWeight(0.1);
 // stroke(255);
 noStroke();
-ellipse(midX,midY-3,14);
+ellipse(midX,midY-3,14,12);
 
 // fill(100,255,255);
 //----------------------FACE
@@ -43,25 +43,26 @@ endShape(CLOSE);
 // stroke(255,100,255);
 fill(155);
 beginShape();//left cheek_______
-vertex(-6.8,2);
-curveVertex(-6.8,2);
+vertex(-6.8,1);
+curveVertex(-6.8,1);
 curveVertex(-5.8,6.5);
-// curveVertex(-2,7);
 vertex(-2,9.3);
 curveVertex(leftC,4);
 endShape(CLOSE);
- /////////////////////////////////////these could be joined togethr with a line under the chin
+
 beginShape();//right cheek_______
-vertex(6.8,2);
-curveVertex(6.8,2);
+vertex(6.8,1);
+curveVertex(6.8,1);
 curveVertex(5.8,6.5);
 vertex(2,9.3);
 curveVertex(rightC,4);
 endShape(CLOSE);
+// try to make a map that works for both but u can use it oppostie wise 
+// chloe said something about absolute numbers??? idk just try it
 
 fill(155);
 
-beginShape();//nose___________
+beginShape();//nose___________  
 vertex(0,4.5);//mid
 curveVertex(0,4.5);
 curveVertex(nose-4,4);
@@ -72,18 +73,58 @@ curveVertex(-nose+4,5);
 curveVertex(-nose+4,4);
 curveVertex(0,4.5)
 endShape(CLOSE);
+// i think for the nose I need to fix that point in the middle cos it looks sharp and agro
 
-beginShape();
-vertex(-2,-1);
-curveVertex(-2,-1);
-curveVertex(-5,-1);
-curveVertex(-5,0);
-curveVertex(-4.8,0.2);
-curveVertex(-2,2);
+beginShape();//eye left_______________
+vertex(-3.8,-1.3);
+curveVertex(-5,-1.2);
+curveVertex(-5,-0);
+curveVertex(-4,1.5);
+curveVertex(-1,2);  
+curveVertex(-1.5,-0.5);
+endShape(CLOSE);
+
+beginShape();//eye right_______________
+vertex(3.8,-1.3);
+curveVertex(5,-1.2);
+curveVertex(5,0);
+curveVertex(4,1.5)
+curveVertex(1,2);
+curveVertex(1.5,-0.5);
 endShape(CLOSE);
 
 
+beginShape();//temple left
+vertex(-7,-1);
+curveVertex(-7,-1);
+curveVertex(-4,-4);
+curveVertex(-4,-6);
+curveVertex(-6.5,-5);
+endShape(CLOSE);
+
+beginShape();//temple right
+vertex(7,-1);
+curveVertex(7,-1);
+curveVertex(4,-4);
+curveVertex(4,-6);
+curveVertex(6.5,-5);
+endShape(CLOSE);
+
+beginShape();//mouf
+vertex(-1.9 ,7.2);
+curveVertex(-1,6.5);
+curveVertex(1,6.5);
+vertex(1.9,7.2);
+
+
+
+
+endShape(CLOSE);
+
 stroke(255,100,100);
+
+
+
 //guideline points MAIN
 beginShape(POINTS);
 vertex(-7,-3);//top left
@@ -98,12 +139,12 @@ vertex(0,-5)
 vertex(-3,4);//hollower cheek ish left
 vertex(3,4);//hollow cheek right
 vertex(-2,9.5);//chin outline
-
 vertex(0,5);
 endShape(CLOSE);
 
-}
 
+}
+//make a box shadow around the edges to soften them, i dont know how so ask phoebe 
 
 function simplePurpleFace() {
   fill(234, 122, 244);
