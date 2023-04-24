@@ -22,11 +22,11 @@ function myFace(leftC,rightC,nose) {
 strokeWeight(0.1);
 // stroke(255);
 noStroke();
-ellipse(midX,midY-3,14,12);
+ellipse(midX,midY-3,13.9,12);
 
 // fill(100,255,255);
-//----------------------FACE
-stroke(255,200,255);
+//----------------------FACE-----------------------------------
+// stroke(255,200,255);
 beginShape();
 // vertex(-7,-3);
 curveVertex(-7,-3);
@@ -43,18 +43,19 @@ endShape(CLOSE);
 // stroke(255,100,255);
 fill(155);
 beginShape();//left cheek_______
-vertex(-6.8,1);
-curveVertex(-6.8,1);
-curveVertex(-5.8,6.5);
-vertex(-2,9.3);
+vertex(-7,0);
+curveVertex(-7,0);
+curveVertex(-6,6);
+vertex(-2.2,9.3);
+
 curveVertex(leftC,4);
 endShape(CLOSE);
 
 beginShape();//right cheek_______
-vertex(6.8,1);
-curveVertex(6.8,1);
-curveVertex(5.8,6.5);
-vertex(2,9.3);
+vertex(7,0);
+curveVertex(7,0);
+curveVertex(6,6);
+vertex(2.2,9.3);
 curveVertex(rightC,4);
 endShape(CLOSE);
 // try to make a map that works for both but u can use it oppostie wise 
@@ -75,6 +76,7 @@ curveVertex(0,4.5)
 endShape(CLOSE);
 // i think for the nose I need to fix that point in the middle cos it looks sharp and agro
 
+
 beginShape();//eye left_______________
 vertex(-3.8,-1.3);
 curveVertex(-5,-1.2);
@@ -83,6 +85,7 @@ curveVertex(-4,1.5);
 curveVertex(-1,2);  
 curveVertex(-1.5,-0.5);
 endShape(CLOSE);
+
 
 beginShape();//eye right_______________
 vertex(3.8,-1.3);
@@ -94,32 +97,37 @@ curveVertex(1.5,-0.5);
 endShape(CLOSE);
 
 
-beginShape();//temple left
+beginShape();//temple left_________________
 vertex(-7,-1);
 curveVertex(-7,-1);
-curveVertex(-4,-4);
-curveVertex(-4,-6);
-curveVertex(-6.5,-5);
+curveVertex(-4.5,-4);
+// curveVertex(-4,-6);
+curveVertex(-6.7,-4.5);
 endShape(CLOSE);
 
-beginShape();//temple right
+
+beginShape();//temple right___________________
 vertex(7,-1);
 curveVertex(7,-1);
-curveVertex(4,-4);
-curveVertex(4,-6);
-curveVertex(6.5,-5);
+curveVertex(4.5,-4);
+// curveVertex(4,-6);
+curveVertex(6.7,-4.5);
 endShape(CLOSE);
 
-beginShape();//mouf
-vertex(-1.9 ,7.2);
+
+beginShape();//mouf__________________
 curveVertex(-1,6.5);
 curveVertex(1,6.5);
 vertex(1.9,7.2);
-
-
-
-
+curveVertex(-1.9 ,7.2);
 endShape(CLOSE);
+
+
+
+
+
+
+
 
 stroke(255,100,100);
 

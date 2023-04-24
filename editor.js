@@ -87,7 +87,7 @@ function draw () {
    // draw face using values mapped from 3 sliders
    let leftC = map(s1,0,100,-3,-5);
    let rightC = map(s2,0,100,3,5);
-   let nose = map(s3,0,100,5.5,6.1);
+   let nose = map(s3,0,100,6.1,5.5);
 
    myFace(leftC,rightC,nose);
   }
