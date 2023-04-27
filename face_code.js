@@ -18,115 +18,156 @@ function myFace(cheek,nose,eyes,temples,mouth,sideRight) {
   let midX=0;
   let midY=0;
 
-  // backgroundColor(0);
-  // filter(BLUR,3);
-
-strokeWeight(0.1);
-// stroke(255);
-fill(135);
-noStroke();
+  
+  //----------------------FACE---------------------------------------------------------------------
+  strokeWeight(0.1);
+  fill(135);
+  noStroke();
 ellipse(midX,midY-3,13.9,12);
 
-//----------------------FACE---------------------------------------------------------------------
-// stroke(255,200,255);
 beginShape();
-// vertex(-7,-3);
-curveVertex(-7,-3);
-curveVertex(-7,-3);
-curveVertex(-5.9,6);
-curveVertex(0,10);
-curveVertex(5.9,6);
-curveVertex(7,-3);
-vertex(7,-3); 
-vertex(7,-3);
+  curveVertex(-7,-3);
+  curveVertex(-7,-3);
+  curveVertex(-5.9,6);
+  curveVertex(0,10);
+  curveVertex(5.9,6);
+  curveVertex(7,-3);
+  vertex(7,-3); 
+  vertex(7,-3);
 endShape(CLOSE);
 
-//--------------------SHADOWS---------------------------------------------------------------------
-// stroke(255,100,255);
+//--------------------SHADOWS-----------------------------MID-------------------------------
 fill(56,56,56);
-beginShape();//left cheek_______
-vertex(-7,0);
-curveVertex(-7,0);
-curveVertex(-6,6);
-vertex(-2.2,9.3);
-curveVertex(-cheek-sideRight/2,4);
+stroke(56);
+strokeWeight(0.05);
+beginShape();//left cheek____________
+  vertex(-6.92,0);
+  curveVertex(-6.92,0);
+  curveVertex(-6,6);
+  vertex(-2.2,9.3);
+  curveVertex(-cheek-sideRight/1.5,4);
 endShape(CLOSE);
 
-beginShape();//right cheek_______
-vertex(7,0);
-curveVertex(7,0);
-curveVertex(6,6);
-vertex(2.2,9.3);
-curveVertex(cheek-sideRight/2,4);
+beginShape();//right cheek___________
+  vertex(6.92,0);
+  curveVertex(6.92,0);
+  curveVertex(6,6);
+  vertex(2.2,9.3);
+  curveVertex(cheek-sideRight/1.5,4);
 endShape(CLOSE);
 
-// fill(155);
-
-beginShape();//nose___________  
-vertex(0,4);//mid
-curveVertex(0,4);
-curveVertex(1.5,4);
-curveVertex(1.5+sideRight/2,5);
-curveVertex(sideRight+0.7,nose)
-curveVertex(sideRight-0.7,nose);//mid
-curveVertex(-1.5+sideRight/3,5);
-curveVertex(-1.5,4);
-curveVertex(0,4)
+beginShape();//nose_______________
+  vertex(0,4);//mid
+  curveVertex(0,4);
+  curveVertex(1.5,4);
+  curveVertex(1.5+sideRight/2,5);
+  curveVertex(sideRight+0.7,nose)
+  curveVertex(sideRight-0.7,nose);//mid
+  curveVertex(-1.5+sideRight/3,5);
+  curveVertex(-1.5,4);
+  curveVertex(0,4)
 endShape(CLOSE);
-
 
 beginShape();//eye left_______________
-vertex(-3.5,-1);
-curveVertex(-4,-1);
-curveVertex(-5,-0);
-curveVertex(-4.5+sideRight/2,1.5);//mid
-curveVertex(-1.75,eyes);
-curveVertex(-1,1.5); 
-curveVertex(-1.5,-0.5);
+  vertex(-3.5,-1);
+  curveVertex(-4,-1);
+  curveVertex(-5,-0);
+  curveVertex(-4.5+sideRight/2,1.5);//mid
+  curveVertex(-1.75,eyes);
+  curveVertex(-1,1.5); 
+  curveVertex(-1.5,-0.5);
 endShape(CLOSE);
-
 
 beginShape();//eye right_______________
-vertex(3.5,-1);
-curveVertex(4,-1);
-curveVertex(5,0);
-curveVertex(4.5+sideRight/2,1.5)//mid
-curveVertex(1.75,eyes);
-curveVertex(1,1.5);
-curveVertex(1.5,-0.5);
+  vertex(3.5,-1);
+  curveVertex(4,-1);
+  curveVertex(5,0);
+  curveVertex(4.5+sideRight/2,1.5)//mid
+  curveVertex(1.75,eyes);
+  curveVertex(1,1.5);
+  curveVertex(1.5,-0.5);
 endShape(CLOSE);
-
 
 beginShape();//temple left_________________
-vertex(-7,-1);
-curveVertex(-7,-1);
-curveVertex(-temples-sideRight/2,-4);
-curveVertex(-6.7,-4.5);
+  vertex(-6.93,-1);
+  curveVertex(-6.93,-1);
+  curveVertex(-temples-sideRight/2,-4);
+  curveVertex(-6.7,-4.5);
 endShape(CLOSE);
-
 
 beginShape();//temple right___________________
-vertex(7,-1);
-curveVertex(7,-1);
-curveVertex(temples-sideRight/2,-4);
-curveVertex(6.7,-4.5);
+  vertex(6.93,-1);
+  curveVertex(6.93,-1);
+  curveVertex(temples-sideRight/2,-4);
+  curveVertex(6.7,-4.5);
 endShape(CLOSE);
-
 
 beginShape();//mouf__________________
-curveVertex(-1,6.5);
-curveVertex(1,6.5);
-vertex(1.9,7.2);
-curveVertex(sideRight,mouth);
-curveVertex(-1.9 ,7.2);
+  curveVertex(-1,6.5);
+  curveVertex(1,6.5);
+  vertex(1.9,7.2);
+  curveVertex(sideRight,mouth);
+  curveVertex(-1.9 ,7.2);
+endShape(CLOSE);
+
+//--------------------------------------------------------------DARK---------------------------
+fill(20);
+stroke(20);
+strokeWeight(0.05);
+beginShape();//left cheek____________
+  vertex(-6.8,2);
+  curveVertex(-6.8,2);
+  curveVertex(-6.1,6);
+  vertex(-4,8);
+  curveVertex(-(cheek*1.3)-sideRight/1.5,4);
+endShape(CLOSE);
+
+beginShape();//right cheek___________
+  vertex(6.8,2);
+  curveVertex(6.8,2);
+  curveVertex(6.1,6);
+  vertex(4,8);
+  curveVertex((cheek*1.3)-sideRight/1.5,4);
+endShape(CLOSE);
+
+beginShape();//nose_______________
+  vertex(0,4.8);//mid
+  curveVertex(1,4.5);
+  curveVertex(1+sideRight/2,5);
+  curveVertex(sideRight+0.4,nose-0.1)
+  curveVertex(sideRight-0.4,nose-0.1);//mid
+  curveVertex(-1+sideRight/3,5);
+  curveVertex(-1,4.5);
+  curveVertex(0,4.8)
+endShape(CLOSE);
+
+beginShape();//eye left_______________
+  vertex(-3.5,-1);
+  curveVertex(-4,-1);
+  curveVertex(-5,-0);
+  curveVertex(-4.5+sideRight/2,1.5);//mid
+  curveVertex(-1.75,eyes);
+  curveVertex(-1,1.5); 
+  curveVertex(-1.5,-0.5);
+endShape(CLOSE);
+
+beginShape();//eye right_______________
+  vertex(3,-0.2);
+  curveVertex(3,-0.7);
+  curveVertex(4,0);
+  curveVertex(3+sideRight/2,0.8)//mid
+  curveVertex(1.9,eyes-1);
+  curveVertex(1.2,1.3);
+  curveVertex(1.8,-0.3);
 endShape(CLOSE);
 
 
-stroke(255,100,100);
 
 
 
 //guideline points MAIN-----------------------------------------------------------------------
+stroke(255,100,100);
+
 beginShape(POINTS);
 vertex(-7,-3);//top left
 vertex(-6,6);
