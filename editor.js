@@ -4,7 +4,7 @@
 
 const canvasWidth = 960;
 const canvasHeight = 500;
-const bg_color = [71, 222, 219];
+const bg_color = [0];
 let slider1, slider2, slider3, slider4, slider5;
 let slider6, slider7, slider8, slider9, slider10;
 let faceSelector;
@@ -88,10 +88,11 @@ function draw () {
    let cheek = map(s1,0,100,3.5,5);
    let nose = map(s2,0,100,5.5,6);
    let eyes = map(s3,0,100,1.8,3);
-   let temples = map(s4,0,100,5,4);
-   let mouth = map(s5,0,100,7.2,7.9);
+   let temples = map(s4,0,100,4,5);
+   let mouth = map(s5,0,100,7.2,8);
+   let sideRight = map(s6,0,100,-1,1);
 
-   myFace(cheek,nose,eyes,temples,mouth);
+   myFace(cheek,nose,eyes,temples,mouth,sideRight);
   }
 
   if (mode == '2') {

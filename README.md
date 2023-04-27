@@ -3,7 +3,4 @@
 ## 2023 MDDN342 Assignment 2: Randomised Collections
 
 
-I've just finished making the shadow shapes, and deciding how they should be placed. I thought that it could use some extra shadow parts, but they would be purely aesthetic and not move. I think I want to wait until I see how everything works together before I play around with things that won't actually do anything. 
-
-My next step is to make sure everything moves correctly, and is in the proper spot. I'm trying to prioritize the functionality of this project before the aesthetic at this time, because I feel like I am being kind of ambitious for what I want to be able to do, and I'm trying to achieve that. 
-
+Todays session has been very good, and I a very happy with where I am. I've made the shadows go from side to side, to show a different light source with each face. I really like how its turning out. I now also have my colour palette, and I'm going to add in highlights and deeper shaodws for a nice contrast

@@ -13,18 +13,20 @@
  * eye_value is an integer number of eyes: either 0, 1, 2, or 3
  * mouth_value is how open the mouth is and should generally range from 0.5 to 10
  */
-function myFace(cheek,nose,eyes,temples,mouth) {
+function myFace(cheek,nose,eyes,temples,mouth,sideRight) {
 
   let midX=0;
   let midY=0;
 
+  // backgroundColor(0);
+  // filter(BLUR,3);
 
 strokeWeight(0.1);
 // stroke(255);
+fill(135);
 noStroke();
 ellipse(midX,midY-3,13.9,12);
 
-// fill(100,255,255);
 //----------------------FACE---------------------------------------------------------------------
 // stroke(255,200,255);
 beginShape();
@@ -41,14 +43,13 @@ endShape(CLOSE);
 
 //--------------------SHADOWS---------------------------------------------------------------------
 // stroke(255,100,255);
-fill(155);
+fill(56,56,56);
 beginShape();//left cheek_______
 vertex(-7,0);
 curveVertex(-7,0);
 curveVertex(-6,6);
 vertex(-2.2,9.3);
-
-curveVertex(-cheek,4);
+curveVertex(-cheek-sideRight/2,4);
 endShape(CLOSE);
 
 beginShape();//right cheek_______
@@ -56,19 +57,19 @@ vertex(7,0);
 curveVertex(7,0);
 curveVertex(6,6);
 vertex(2.2,9.3);
-curveVertex(cheek,4);
+curveVertex(cheek-sideRight/2,4);
 endShape(CLOSE);
 
-fill(155);
+// fill(155);
 
 beginShape();//nose___________  
 vertex(0,4);//mid
 curveVertex(0,4);
 curveVertex(1.5,4);
-curveVertex(1.5,5);
-curveVertex(0.5,nose)
-curveVertex(-0.5,nose);//mid
-curveVertex(-1.5,5);
+curveVertex(1.5+sideRight/2,5);
+curveVertex(sideRight+0.7,nose)
+curveVertex(sideRight-0.7,nose);//mid
+curveVertex(-1.5+sideRight/3,5);
 curveVertex(-1.5,4);
 curveVertex(0,4)
 endShape(CLOSE);
@@ -78,7 +79,7 @@ beginShape();//eye left_______________
 vertex(-3.5,-1);
 curveVertex(-4,-1);
 curveVertex(-5,-0);
-curveVertex(-4.5,1.5);//mid
+curveVertex(-4.5+sideRight/2,1.5);//mid
 curveVertex(-1.75,eyes);
 curveVertex(-1,1.5); 
 curveVertex(-1.5,-0.5);
@@ -89,7 +90,7 @@ beginShape();//eye right_______________
 vertex(3.5,-1);
 curveVertex(4,-1);
 curveVertex(5,0);
-curveVertex(4.5,1.5)//mid
+curveVertex(4.5+sideRight/2,1.5)//mid
 curveVertex(1.75,eyes);
 curveVertex(1,1.5);
 curveVertex(1.5,-0.5);
@@ -99,7 +100,7 @@ endShape(CLOSE);
 beginShape();//temple left_________________
 vertex(-7,-1);
 curveVertex(-7,-1);
-curveVertex(-temples,-4);
+curveVertex(-temples-sideRight/2,-4);
 curveVertex(-6.7,-4.5);
 endShape(CLOSE);
 
@@ -107,7 +108,7 @@ endShape(CLOSE);
 beginShape();//temple right___________________
 vertex(7,-1);
 curveVertex(7,-1);
-curveVertex(temples,-4);
+curveVertex(temples-sideRight/2,-4);
 curveVertex(6.7,-4.5);
 endShape(CLOSE);
 
@@ -116,7 +117,7 @@ beginShape();//mouf__________________
 curveVertex(-1,6.5);
 curveVertex(1,6.5);
 vertex(1.9,7.2);
-curveVertex(0,mouth);
+curveVertex(sideRight,mouth);
 curveVertex(-1.9 ,7.2);
 endShape(CLOSE);
 
