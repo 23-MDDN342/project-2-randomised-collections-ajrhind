@@ -37,8 +37,8 @@ beginShape();
 endShape(CLOSE);
 
 //--------------------SHADOWS-----------------------------MID-------------------------------
-fill(56,56,56);
-stroke(56);
+fill(70);
+stroke(70);
 strokeWeight(0.05);
 beginShape();//left cheek____________
   vertex(-6.92,0);
@@ -92,14 +92,16 @@ beginShape();//temple left_________________
   vertex(-6.93,-1);
   curveVertex(-6.93,-1);
   curveVertex(-temples-sideRight/2,-4);
-  curveVertex(-6.7,-4.5);
+  curveVertex(-5.7,-6);
+  curveVertex(-6.8,-4.3);
 endShape(CLOSE);
 
 beginShape();//temple right___________________
   vertex(6.93,-1);
   curveVertex(6.93,-1);
   curveVertex(temples-sideRight/2,-4);
-  curveVertex(6.7,-4.5);
+  curveVertex(5.7,-6);
+  curveVertex(6.8 ,-4.3);
 endShape(CLOSE);
 
 beginShape();//mouf__________________
@@ -111,8 +113,8 @@ beginShape();//mouf__________________
 endShape(CLOSE);
 
 //--------------------------------------------------------------DARK---------------------------
-fill(20);
-stroke(20);
+fill(40);
+stroke(40);
 strokeWeight(0.05);
 beginShape();//left cheek____________
   vertex(-6.8,2);
@@ -142,25 +144,67 @@ beginShape();//nose_______________
 endShape(CLOSE);
 
 beginShape();//eye left_______________
-  vertex(-3.5,-1);
-  curveVertex(-4,-1);
-  curveVertex(-5,-0);
-  curveVertex(-4.5+sideRight/2,1.5);//mid
-  curveVertex(-1.75,eyes);
-  curveVertex(-1,1.5); 
-  curveVertex(-1.5,-0.5);
+  vertex(-3,-0.4);
+  curveVertex(-3,-0.4);
+  curveVertex(-3.8,-0);
+  curveVertex(-3+sideRight/2,0.8);//mid
+  curveVertex(-1.9,(eyes/1.3)-1);
+  curveVertex(-1.7,-0.1);
 endShape(CLOSE);
 
 beginShape();//eye right_______________
-  vertex(3,-0.2);
-  curveVertex(3,-0.7);
-  curveVertex(4,0);
+  vertex(3,-0.4);
+  curveVertex(3,-0.4);
+  curveVertex(3.8,0);
   curveVertex(3+sideRight/2,0.8)//mid
-  curveVertex(1.9,eyes-1);
-  curveVertex(1.2,1.3);
-  curveVertex(1.8,-0.3);
+  curveVertex(1.9,(eyes/1.3)-1);
+  curveVertex(1.7,-0.1);
 endShape(CLOSE);
 
+beginShape();//temple left_________________
+  vertex(-6.93,-1.5);
+  curveVertex(-6.93,-1.5);
+  curveVertex((-temples-1)-sideRight/2,-4);
+  curveVertex(-6.7,-4.5);
+endShape(CLOSE);
+
+beginShape();//temple right___________________
+  vertex(6.93,-1.5);
+  curveVertex(6.93,-1.5);
+  curveVertex((temples+1)-sideRight/2,-4);
+  curveVertex(6.7,-4.5);
+endShape(CLOSE);
+
+beginShape();//top of the head FILL IN @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+endShape(CLOSE);
+
+beginShape();//mouf__________________
+  curveVertex(-1,6.6);
+  curveVertex(1,6.6);
+  vertex(1.9,7.2);
+  curveVertex(0,7);
+  curveVertex(-1.9 ,7.2);
+endShape(CLOSE);
+
+//-----------------------------------------------------------HIGHLIGHT-----------------------------
+
+fill(160);
+noStroke();
+beginShape();//nose 
+vertex(-0.3,1);
+// curveVertex(-0.3,0);
+curveVertex(-0.3,1);
+curveVertex(-0.5,3.5);//bottom left
+curveVertex(0.5,3.5);//bottom right
+curveVertex(0.3,1);
+curveVertex(1.3,-1.6);//left top
+curveVertex(0,-3);
+curveVertex(-1.3,-1.6);
+// curveVertex(-0.1,0);
+endShape(CLOSE);
+
+// I need to change the cheek/tilt shadow thing because it ends up overlapping the face and that a problem ls fix girlie
+//I also need to do the highlight stuuf and make it move around bc it is not rn
 
 
 
