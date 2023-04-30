@@ -23,36 +23,38 @@ function myFace(cheek,nose,eyes,temples,mouth,sideRight) {
   strokeWeight(0.1);
   fill(135);
   noStroke();
-ellipse(midX,midY-3,13.9,12);
+ellipse(midX,midY-3,13,12);
 
+stroke(100,200,100);
 beginShape();
-  curveVertex(-7,-3);
-  curveVertex(-7,-3);
-  curveVertex(-5.9,6);
+  // curveVertex(-7,-3);
+  vertex(6,-3); 
+  // curveVertex(-6.7,-3);
+  vertex(-6.7,-3);
+  curveVertex(-6,6);
   curveVertex(0,10);
-  curveVertex(5.9,6);
-  curveVertex(7,-3);
-  vertex(7,-3); 
-  vertex(7,-3);
+  curveVertex(5.7,6);
+  curveVertex(6.7,-2);
+  // vertex(6.9,-3);
 endShape(CLOSE);
 
-//--------------------SHADOWS-----------------------------MID-------------------------------
+// --------------------SHADOWS-----------------------------MID-------------------------------
 fill(70);
 stroke(70);
 strokeWeight(0.05);
 beginShape();//left cheek____________
-  vertex(-6.92,0);
-  curveVertex(-6.92,0);
-  curveVertex(-6,6);
-  vertex(-2.2,9.3);
+  vertex(-6.8,0);
+  curveVertex(-6.8,0);
+  curveVertex(-5.7,6);
+  vertex(-2.2,9.2);
   curveVertex(-cheek-sideRight/1.5,4);
 endShape(CLOSE);
 
 beginShape();//right cheek___________
-  vertex(6.92,0);
-  curveVertex(6.92,0);
-  curveVertex(6,6);
-  vertex(2.2,9.3);
+  vertex(6.8,0);
+  curveVertex(6.8,0);
+  curveVertex(5.7,6);
+  vertex(2.2,9.2);
   curveVertex(cheek-sideRight/1.5,4);
 endShape(CLOSE);
 
@@ -89,19 +91,19 @@ beginShape();//eye right_______________
 endShape(CLOSE);
 
 beginShape();//temple left_________________
-  vertex(-6.93,-1);
-  curveVertex(-6.93,-1);
+  vertex(-6.85,-1);
+  curveVertex(-6.85,-1);
   curveVertex(-temples-sideRight/2,-4);
-  curveVertex(-5.7,-6);
-  curveVertex(-6.8,-4.3);
+  curveVertex(-5.4,-6);
+  curveVertex(-6.4,-4.3);
 endShape(CLOSE);
 
 beginShape();//temple right___________________
-  vertex(6.93,-1);
-  curveVertex(6.93,-1);
+  vertex(6.85,-1);
+  curveVertex(6.85,-1);
   curveVertex(temples-sideRight/2,-4);
-  curveVertex(5.7,-6);
-  curveVertex(6.8 ,-4.3);
+  curveVertex(5.4,-6);
+  curveVertex(6.4,-4.3);
 endShape(CLOSE);
 
 beginShape();//mouf__________________
@@ -117,18 +119,18 @@ fill(40);
 stroke(40);
 strokeWeight(0.05);
 beginShape();//left cheek____________
-  vertex(-6.8,2);
-  curveVertex(-6.8,2);
-  curveVertex(-6.1,6);
-  vertex(-4,8);
+  vertex(-6.6,2);
+  curveVertex(-6.6,2);
+  curveVertex(-5.7,6);
+  vertex(-4,7.8);
   curveVertex(-(cheek*1.3)-sideRight/1.5,4);
 endShape(CLOSE);
 
 beginShape();//right cheek___________
-  vertex(6.8,2);
-  curveVertex(6.8,2);
-  curveVertex(6.1,6);
-  vertex(4,8);
+  vertex(6.6,2);
+  curveVertex(6.6,2);
+  curveVertex(5.7,6);
+  vertex(4,7.8);
   curveVertex((cheek*1.3)-sideRight/1.5,4);
 endShape(CLOSE);
 
@@ -162,17 +164,17 @@ beginShape();//eye right_______________
 endShape(CLOSE);
 
 beginShape();//temple left_________________
-  vertex(-6.93,-1.5);
-  curveVertex(-6.93,-1.5);
+  vertex(-6.8,-1.5);
+  curveVertex(-6.8,-1.5);
   curveVertex((-temples-1)-sideRight/2,-4);
-  curveVertex(-6.7,-4.5);
+  curveVertex(-6.3,-4.5);
 endShape(CLOSE);
 
 beginShape();//temple right___________________
-  vertex(6.93,-1.5);
-  curveVertex(6.93,-1.5);
+  vertex(6.8,-1.5);
+  curveVertex(6.8,-1.5);
   curveVertex((temples+1)-sideRight/2,-4);
-  curveVertex(6.7,-4.5);
+  curveVertex(6.3,-4.5);
 endShape(CLOSE);
 
 beginShape();//top of the head FILL IN @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -190,43 +192,51 @@ endShape(CLOSE);
 
 fill(160);
 noStroke();
-beginShape();//nose 
+beginShape();//nose forehead thing
 vertex(-0.3,1);
-// curveVertex(-0.3,0);
 curveVertex(-0.3,1);
 curveVertex(-0.5,3.5);//bottom left
 curveVertex(0.5,3.5);//bottom right
 curveVertex(0.3,1);
-curveVertex(1.3,-1.6);//left top
-curveVertex(0,-3);
-curveVertex(-1.3,-1.6);
-// curveVertex(-0.1,0);
+curveVertex(-sideRight/2+1,-1.6);//left top
+curveVertex(0,-3);//top mid 
+curveVertex(-sideRight/2-1,-1.6);//top right
 endShape(CLOSE);
 
-// I need to change the cheek/tilt shadow thing because it ends up overlapping the face and that a problem ls fix girlie
-//I also need to do the highlight stuuf and make it move around bc it is not rn
+beginShape();//cheek left
+// vertex(-1,2);
+curveVertex(-1,eyes);
+curveVertex(-1.8,4);
+curveVertex(-3,eyes);
+curveVertex(-2,eyes+0.2);
+endShape(CLOSE);
 
-
+beginShape();//cheek right
+curveVertex(1,2.3);
+curveVertex(1.8,4);
+curveVertex(3,2.5);
+curveVertex(2,2.7);
+endShape(CLOSE);
 
 
 //guideline points MAIN-----------------------------------------------------------------------
-stroke(255,100,100);
+// stroke(255,100,100);
 
-beginShape(POINTS);
-vertex(-7,-3);//top left
-vertex(-6,6);
-vertex(0,10);//chin
-vertex(6,6);
-vertex(7,-3);//top right
-//secondary
-vertex(0,0);//eyes
-vertex(0,-5)
-//shadow ones
-vertex(-3,4);//hollower cheek ish left
-vertex(3,4);//hollow cheek right
-vertex(-2,9.5);//chin outline
-vertex(0,5);
-endShape(CLOSE);
+// beginShape(POINTS);
+// vertex(-7,-3);//top left
+// vertex(-6,6);
+// vertex(0,10);//chin
+// vertex(6,6);
+// vertex(7,-3);//top right
+// //secondary
+// vertex(0,0);//eyes
+// vertex(0,-5)
+// //shadow ones
+// vertex(-3,4);//hollower cheek ish left
+// vertex(3,4);//hollow cheek right
+// vertex(-2,9.5);//chin outline
+// vertex(0,5);
+// endShape(CLOSE);
 
 
 }

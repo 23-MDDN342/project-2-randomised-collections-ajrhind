@@ -85,7 +85,7 @@ function draw () {
   push();
   if (mode == '1') {
    // draw face using values mapped from 3 sliders
-   let cheek = map(s1,0,100,3.5,5);
+   let cheek = map(s1,0,100,3.5,4.2);
    let nose = map(s2,0,100,5.5,6);
    let eyes = map(s3,0,100,1.8,3);
    let temples = map(s4,0,100,4,5);

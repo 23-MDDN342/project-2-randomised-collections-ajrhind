@@ -2,5 +2,8 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10649353&assignment_repo_type=AssignmentRepo)
 ## 2023 MDDN342 Assignment 2: Randomised Collections
 
+I've got the majority of my code working, and I'm still working on the aesthetics of my design. The colour palette is a big part of how the design will turn out, and I really need to make sure it is perfect. I've gone through about three different iterations of it now, but I'm still not sold on the current one. 
 
-Todays session has been very good, and I a very happy with where I am. I've made the shadows go from side to side, to show a different light source with each face. I really like how its turning out. I now also have my colour palette, and I'm going to add in highlights and deeper shaodws for a nice contrast
+The shape of the highlights and shadows are also not quite right to me, but I think I need to fix the colours for it to look better. 
+
+The next stage for me is to keep tweaking the little highlights and shadows, making sure it is sitting how I want it to.
