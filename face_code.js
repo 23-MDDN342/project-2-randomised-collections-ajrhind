@@ -13,7 +13,7 @@
  * eye_value is an integer number of eyes: either 0, 1, 2, or 3
  * mouth_value is how open the mouth is and should generally range from 0.5 to 10
  */
-function myFace(cheek,nose,eyes,temples,mouth,sideRight,highLs) {
+function myFace(cheek,nose,eyes,temples,mouth,sideRight) {
 
   let midX=0;
   let midY=0;
@@ -39,6 +39,38 @@ beginShape();
   curveVertex(6.7,-1.5);
   // vertex(6.9,-3);
 endShape(CLOSE);
+
+//highlight??------------------------------------------------------------------
+
+fill(160);
+noStroke();
+beginShape();//nose forehead thing
+vertex(-0.3,1);
+curveVertex(-0.3,1);
+curveVertex(-0.5,3.5);//bottom left
+curveVertex(0.5,3.5);//bottom right
+curveVertex(0.3,1);
+curveVertex(-sideRight/2+1,-1.6);//left top
+curveVertex(-sideRight/2,-3);//top mid 
+curveVertex(-sideRight/2-1,-1.6);//top right
+endShape(CLOSE);
+
+beginShape();//cheek left
+// vertex(-1,2);
+curveVertex(-1,1);
+curveVertex(-1.8,4);
+curveVertex((-sideRight/2)-4,0);
+curveVertex(-2,0);
+endShape(CLOSE);
+
+beginShape();//cheek right
+curveVertex(1,1);
+curveVertex(1.8,4);
+curveVertex((-sideRight/2)+4,0);
+curveVertex(2,0);
+endShape(CLOSE);
+
+
 
 // --------------------SHADOWS-----------------------------MID-------------------------------
 fill(70);
@@ -192,37 +224,34 @@ endShape(CLOSE);
 
 //-----------------------------------------------------------HIGHLIGHT-----------------------------
 
-fill(160);
-noStroke();
-beginShape();//nose forehead thing
-vertex(-0.3,1);
-curveVertex(-0.3,1);
-curveVertex(-0.5,3.5);//bottom left
-curveVertex(0.5,3.5);//bottom right
-curveVertex(0.3,1);
-curveVertex(-sideRight/2+1,-1.6);//left top
-curveVertex(0,-3);//top mid 
-curveVertex(-sideRight/2-1,-1.6);//top right
-endShape(CLOSE);
+// fill(160);
+// noStroke();
+// beginShape();//nose forehead thing
+// vertex(-0.3,1);
+// curveVertex(-0.3,1);
+// curveVertex(-0.5,3.5);//bottom left
+// curveVertex(0.5,3.5);//bottom right
+// curveVertex(0.3,1);
+// curveVertex(-sideRight/2+1,-1.6);//left top
+// curveVertex(0,-3);//top mid 
+// curveVertex(-sideRight/2-1,-1.6);//top right
+// endShape(CLOSE);
 
-beginShape();//cheek left
-// vertex(-1,2);
-curveVertex(-1,eyes);
-curveVertex(-1.8,4);
-curveVertex((-sideRight/2)-4,(eyes/1.3)+sideRight/6);
-curveVertex(-2,eyes+0.1);
-endShape(CLOSE);
+// beginShape();//cheek left
+// // vertex(-1,2);
+// curveVertex(-1,eyes);
+// curveVertex(-1.8,4);
+// curveVertex((-sideRight/2)-4,(eyes/1.3)+sideRight/6);
+// curveVertex(-2,eyes+0.1);
+// endShape(CLOSE);
 
-beginShape();//cheek right
-curveVertex(1,eyes);
-curveVertex(1.8,4);
-curveVertex(-sideRight+3,eyes);
-curveVertex(2,eyes+0.1);
-endShape(CLOSE);
+// beginShape();//cheek right
+// curveVertex(1,eyes);
+// curveVertex(1.8,4);
+// curveVertex(-sideRight+3,eyes);
+// curveVertex(2,eyes+0.1);
+// endShape(CLOSE);
 
-// if(sideRigh<0){
-
-// }
 
 //guideline points MAIN-----------------------------------------------------------------------
 // stroke(255,100,100);

@@ -10,7 +10,7 @@ let lastSwapTime = 0;
 const millisPerSwap = 3000;
 
 // global variables for colors
-const bg_color1 = [120];
+const bg_color1 = [100];
 function setup () {
   // create the drawing canvas, save the canvas element
   let main_canvas = createCanvas(canvasWidth, canvasHeight);
@@ -45,6 +45,12 @@ function draw () {
   background(bg_color1);
   noStroke();
 
+  // for(let i=0; i=5;i++){
+  //   stroke(0);
+  //   strokeWeight(3);
+
+  //   ellipse(i*2,i*1);
+  // }
   // draw a 7x4 grid of faces
   let w = canvasWidth / 4;
   let h = canvasHeight / 2;
@@ -54,9 +60,9 @@ function draw () {
       let x = w/2 + w*j;
      
         // center face
-        let cheek = random(3.5,5);
+        let cheek = random(3.5,4.2);
         let nose = random(5.5,6);
-        let eyes = random(2,4);
+        let eyes = random(1.8,3);
         let temples = random(4,5);
         let mouth  = random(7.2,8);
         let sideRight = random(-1,1);
@@ -71,7 +77,12 @@ function draw () {
         // }
 
         push();
-        translate(x, y);
+        let place = map(sideRight,-1,1,10,90);
+        let upsie = map(eyes,1.8,3,130,150);
+        translate(place*10, upsie*2);
+          // map (sideRight, -1, 1, -30, 30 )
+          // draw light // the x value is the map the y is - 30 
+
         scale(w/25, h/25);
         
         myFace(cheek,nose,eyes,temples,mouth,sideRight)
