@@ -91,8 +91,9 @@ function draw () {
    let temples = map(s4,0,100,4,5);
    let mouth = map(s5,0,100,7.2,8);
    let sideRight = map(s6,0,100,-1,1);
+   let highLs = map(s7,0,100,-1,1);
 
-   myFace(cheek,nose,eyes,temples,mouth,sideRight);
+   myFace(cheek,nose,eyes,temples,mouth,sideRight,highLs);
   }
 
   if (mode == '2') {

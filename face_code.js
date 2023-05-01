@@ -13,7 +13,7 @@
  * eye_value is an integer number of eyes: either 0, 1, 2, or 3
  * mouth_value is how open the mouth is and should generally range from 0.5 to 10
  */
-function myFace(cheek,nose,eyes,temples,mouth,sideRight) {
+function myFace(cheek,nose,eyes,temples,mouth,sideRight,highLs) {
 
   let midX=0;
   let midY=0;
@@ -25,16 +25,18 @@ function myFace(cheek,nose,eyes,temples,mouth,sideRight) {
   noStroke();
 ellipse(midX,midY-3,13,12);
 
-stroke(100,200,100);
+// stroke(100,200,100);
+stroke(135);
 beginShape();
   // curveVertex(-7,-3);
   vertex(6,-3); 
   // curveVertex(-6.7,-3);
-  vertex(-6.7,-3);
-  curveVertex(-6,6);
+  curveVertex(-5,-3);
+  curveVertex(-6.7,-1.5);
+  curveVertex(-5.5,6);
   curveVertex(0,10);
-  curveVertex(5.7,6);
-  curveVertex(6.7,-2);
+  curveVertex(5.5,6);
+  curveVertex(6.7,-1.5);
   // vertex(6.9,-3);
 endShape(CLOSE);
 
@@ -75,7 +77,7 @@ beginShape();//eye left_______________
   curveVertex(-4,-1);
   curveVertex(-5,-0);
   curveVertex(-4.5+sideRight/2,1.5);//mid
-  curveVertex(-1.75,eyes);
+  curveVertex(-1.75,eyes-0.1);
   curveVertex(-1,1.5); 
   curveVertex(-1.5,-0.5);
 endShape(CLOSE);
@@ -85,7 +87,7 @@ beginShape();//eye right_______________
   curveVertex(4,-1);
   curveVertex(5,0);
   curveVertex(4.5+sideRight/2,1.5)//mid
-  curveVertex(1.75,eyes);
+  curveVertex(1.75,eyes-0.1);
   curveVertex(1,1.5);
   curveVertex(1.5,-0.5);
 endShape(CLOSE);
@@ -148,7 +150,7 @@ endShape(CLOSE);
 beginShape();//eye left_______________
   vertex(-3,-0.4);
   curveVertex(-3,-0.4);
-  curveVertex(-3.8,-0);
+  curveVertex(-3.8,0);
   curveVertex(-3+sideRight/2,0.8);//mid
   curveVertex(-1.9,(eyes/1.3)-1);
   curveVertex(-1.7,-0.1);
@@ -207,17 +209,20 @@ beginShape();//cheek left
 // vertex(-1,2);
 curveVertex(-1,eyes);
 curveVertex(-1.8,4);
-curveVertex(-3,eyes);
-curveVertex(-2,eyes+0.2);
+curveVertex((-sideRight/2)-4,(eyes/1.3)+sideRight/6);
+curveVertex(-2,eyes+0.1);
 endShape(CLOSE);
 
 beginShape();//cheek right
-curveVertex(1,2.3);
+curveVertex(1,eyes);
 curveVertex(1.8,4);
-curveVertex(3,2.5);
-curveVertex(2,2.7);
+curveVertex(-sideRight+3,eyes);
+curveVertex(2,eyes+0.1);
 endShape(CLOSE);
 
+// if(sideRigh<0){
+
+// }
 
 //guideline points MAIN-----------------------------------------------------------------------
 // stroke(255,100,100);
@@ -238,7 +243,5 @@ endShape(CLOSE);
 // vertex(0,5);
 // endShape(CLOSE);
 
-
 }
-//make a box shadow around the edges to soften them, i dont know how so ask phoebe 
 
