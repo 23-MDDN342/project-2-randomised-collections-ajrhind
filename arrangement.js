@@ -1,13 +1,9 @@
-/*
- * This program draws your arrangement of faces on the canvas.
- */
-
 const canvasWidth = 960;
 const canvasHeight = 500;
 let curRandomSeed = 0;
 
 let lastSwapTime = 0;
-const millisPerSwap = 3000;
+const millisPerSwap = 2000;
 
 // global variables for colors
 const bg_color1 = [0];
@@ -27,8 +23,6 @@ function changeRandomSeed() {
   lastSwapTime = millis();
 }
 
-
-
 function mouseClicked() {
   changeRandomSeed();
 }
@@ -41,16 +35,8 @@ function draw () {
   // reset the random number generator each time draw is called
   randomSeed(curRandomSeed);
 
-  
-  
   background(bg_color1);
 
-  for(i=0; i<20; i++){
-    noStroke();
-    fill(180,20);
-    strokeWeight(10);
-    triangle(480,-150,180*i/12,500,780*i/15,500);
-  } 
 
   // clear screen
   noStroke();
@@ -60,7 +46,7 @@ function draw () {
   let w = canvasWidth / 4;
   let h = canvasHeight / 2;
   for(let i=0; i<1; i++) {
-    for(let j=0; j<4; j++) {
+    for(let j=0; j<12; j++) {
       let y = h/1 + h*i;
       let x = w/2 + w*j;
      
@@ -72,9 +58,8 @@ function draw () {
         let mouth  = random(7.2,8);
         let sideRight = random(-1,1);
 
-
       push();
-        let place = map(sideRight,-1,1,10,90);
+        let place = map(sideRight,-1,1,15,85);
         let upsie = map(eyes,1.8,3,130,150);
         translate(place*10, upsie*2);
           // map (sideRight, -1, 1, -30, 30 )
@@ -83,11 +68,29 @@ function draw () {
         scale(w/25, h/25);
         
         myFace(cheek,nose,eyes,temples,mouth,sideRight)
-          // fill(0,i);  
-      pop();
-            
-    }
+        pop();
+        fill(20,80);
+        rect(0,0,960,500);
+      }
   }
+
+// let  sidesM = map(sides,0,100,180,780);
+// let sides = 60;
+
+for(i=0; i<20; i++){//spotlight
+  let leftSpot = map(i,0,100,180,480);
+  let rightSpot = map(i,0,100,480,780);
+    noStroke();
+    fill(255,5);
+    strokeWeight(10);
+    // triangle(480,-150,sides*3,500,sides*13,500);
+    triangle(480,-150,leftSpot,500,rightSpot*1.5,500);
+
+    //how do i do this pls help phoebe i think its a map i have no brain power left its all out the window 
+    // if(sides<180 && sides>780){
+    // }
+  } 
+
 }
 
 function keyTyped() {

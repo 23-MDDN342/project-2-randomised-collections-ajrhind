@@ -1,32 +1,25 @@
-/*
- * This file should contain code that draws your faces.
- *
- * Each function takes parameters and draws a face that is within
- * the bounding box (-10, -10) to (10, 10).
- *
- * These functions are used by your final arrangement of faces as well as the face editor.
- */
 
-
-/*
- * tilt_value is in degrees
- * eye_value is an integer number of eyes: either 0, 1, 2, or 3
- * mouth_value is how open the mouth is and should generally range from 0.5 to 10
- */
 function myFace(cheek,nose,eyes,temples,mouth,sideRight) {
 
   let midX=0;
   let midY=0;
 
+  angleMode(DEGREES);
+
+
+  let baseC = 115;
+  let high = 130;
+  let midd = 80;
+  let dark = 60;
   
   //----------------------FACE---------------------------------------------------------------------
   strokeWeight(0.1);
-  fill(135);
+  fill(baseC);
   noStroke();
 ellipse(midX,midY-3,13,12);
 
 // stroke(100,200,100);
-stroke(135);
+stroke(baseC);
 beginShape();
   // curveVertex(-7,-3);
   vertex(6,-3); 
@@ -40,9 +33,16 @@ beginShape();
   // vertex(6.9,-3);
 endShape(CLOSE);
 
-//highlight??------------------------------------------------------------------
 
-fill(160);
+// noStroke();
+// fill(80);
+// ellipse(midX,midY-3,13,12);
+// fill(135);
+// ellipse(midX,midY-1,13,8)
+
+//-----------------------------------------------------------HIGHLIGHT-----------------------------
+
+fill(high);
 noStroke();
 beginShape();//nose forehead thing
 vertex(-0.3,1);
@@ -71,10 +71,25 @@ curveVertex(2,0);
 endShape(CLOSE);
 
 
-
 // --------------------SHADOWS-----------------------------MID-------------------------------
-fill(70);
-stroke(70);
+fill(135);
+
+// beginShape();//top of head
+// vertex(-6.5,-2.3);
+// curveVertex(-6.5,-2.3);
+// curveVertex(-4.5,-7.5);
+// curveVertex(0,-8);
+// curveVertex(6.85,-2);
+// curveVertex(0,-6);
+// endShape(CLOSE);
+
+// strokeWeight(1);
+// stroke(80);
+// noFill();
+// arc(midX,midY-3,13,12,180,0,HALF);
+
+fill(midd);
+stroke(midd);
 strokeWeight(0.05);
 beginShape();//left cheek____________
   vertex(-6.8,0);
@@ -149,8 +164,8 @@ beginShape();//mouf__________________
 endShape(CLOSE);
 
 //--------------------------------------------------------------DARK---------------------------
-fill(40);
-stroke(40);
+fill(dark);
+stroke(dark);
 strokeWeight(0.05);
 beginShape();//left cheek____________
   vertex(-6.6,2);
@@ -221,36 +236,6 @@ beginShape();//mouf__________________
   curveVertex(0,7);
   curveVertex(-1.9 ,7.2);
 endShape(CLOSE);
-
-//-----------------------------------------------------------HIGHLIGHT-----------------------------
-
-// fill(160);
-// noStroke();
-// beginShape();//nose forehead thing
-// vertex(-0.3,1);
-// curveVertex(-0.3,1);
-// curveVertex(-0.5,3.5);//bottom left
-// curveVertex(0.5,3.5);//bottom right
-// curveVertex(0.3,1);
-// curveVertex(-sideRight/2+1,-1.6);//left top
-// curveVertex(0,-3);//top mid 
-// curveVertex(-sideRight/2-1,-1.6);//top right
-// endShape(CLOSE);
-
-// beginShape();//cheek left
-// // vertex(-1,2);
-// curveVertex(-1,eyes);
-// curveVertex(-1.8,4);
-// curveVertex((-sideRight/2)-4,(eyes/1.3)+sideRight/6);
-// curveVertex(-2,eyes+0.1);
-// endShape(CLOSE);
-
-// beginShape();//cheek right
-// curveVertex(1,eyes);
-// curveVertex(1.8,4);
-// curveVertex(-sideRight+3,eyes);
-// curveVertex(2,eyes+0.1);
-// endShape(CLOSE);
 
 
 //guideline points MAIN-----------------------------------------------------------------------
