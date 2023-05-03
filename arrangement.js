@@ -57,38 +57,37 @@ function draw () {
         let temples = random(4,5);
         let mouth  = random(7.2,8);
         let sideRight = random(-1,1);
+        let redEyes = random(1,300);
+        let areTheyEvil = false; 
+        if (redEyes > 298){
+          areTheyEvil = true;
+        }
 
       push();
-        let place = map(sideRight,-1,1,15,85);
-        let upsie = map(eyes,1.8,3,130,150);
+        let place = map(sideRight,-1,1,15,85);//x
+        let upsie = map(eyes,1.8,3,130,150);//y
         translate(place*10, upsie*2);
           // map (sideRight, -1, 1, -30, 30 )
           // draw light // the x value is the map the y is - 30 
 
         scale(w/25, h/25);
-        
-        myFace(cheek,nose,eyes,temples,mouth,sideRight)
+        //function myFace(cheek,nose,eyes,temples,mouth,sideRight, evilness) {
+        myFace(cheek,nose,eyes,temples,mouth,sideRight,areTheyEvil)
         pop();
         fill(20,80);
         rect(0,0,960,500);
       }
   }
 
-// let  sidesM = map(sides,0,100,180,780);
-// let sides = 60;
-
-for(i=0; i<20; i++){//spotlight
-  let leftSpot = map(i,0,100,180,480);
-  let rightSpot = map(i,0,100,480,780);
+for(i=0; i<15; i++){//spotlight
+  let leftSpot = map(i,0,100,100,980);
+  let rightSpot = map(i,0,100,500,1200);
     noStroke();
     fill(255,5);
     strokeWeight(10);
     // triangle(480,-150,sides*3,500,sides*13,500);
     triangle(480,-150,leftSpot,500,rightSpot*1.5,500);
 
-    //how do i do this pls help phoebe i think its a map i have no brain power left its all out the window 
-    // if(sides<180 && sides>780){
-    // }
   } 
 
 }

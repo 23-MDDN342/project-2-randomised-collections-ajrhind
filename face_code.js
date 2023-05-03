@@ -1,5 +1,5 @@
 
-function myFace(cheek,nose,eyes,temples,mouth,sideRight) {
+function myFace(cheek,nose,eyes,temples,mouth,sideRight, evilness) {
 
   let midX=0;
   let midY=0;
@@ -11,7 +11,8 @@ function myFace(cheek,nose,eyes,temples,mouth,sideRight) {
   let high = 130;
   let midd = 80;
   let dark = 60;
-  
+  let redEyes = color(171, 14, 3);
+ 
   //----------------------FACE---------------------------------------------------------------------
   strokeWeight(0.1);
   fill(baseC);
@@ -193,7 +194,12 @@ beginShape();//nose_______________
   curveVertex(-1,4.5);
   curveVertex(0,4.8)
 endShape(CLOSE);
-
+if(evilness){
+  fill(redEyes);
+}
+else(
+  fill(dark)
+)
 beginShape();//eye left_______________
   vertex(-3,-0.4);
   curveVertex(-3,-0.4);
@@ -212,6 +218,7 @@ beginShape();//eye right_______________
   curveVertex(1.7,-0.1);
 endShape(CLOSE);
 
+fill(dark);
 beginShape();//temple left_________________
   vertex(-6.8,-1.5);
   curveVertex(-6.8,-1.5);
