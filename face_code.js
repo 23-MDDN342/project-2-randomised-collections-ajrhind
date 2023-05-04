@@ -6,7 +6,7 @@ function myFace(cheek,nose,eyes,temples,mouth,sideRight, evilness) {
 
   angleMode(DEGREES);
 
-
+//colours
   let baseC = 115;
   let high = 130;
   let midd = 80;
@@ -19,27 +19,17 @@ function myFace(cheek,nose,eyes,temples,mouth,sideRight, evilness) {
   noStroke();
 ellipse(midX,midY-3,13,12);
 
-// stroke(100,200,100);
 stroke(baseC);
 beginShape();
-  // curveVertex(-7,-3);
   vertex(6,-3); 
-  // curveVertex(-6.7,-3);
   curveVertex(-5,-3);
   curveVertex(-6.7,-1.5);
   curveVertex(-5.5,6);
   curveVertex(0,10);
   curveVertex(5.5,6);
   curveVertex(6.7,-1.5);
-  // vertex(6.9,-3);
 endShape(CLOSE);
 
-
-// noStroke();
-// fill(80);
-// ellipse(midX,midY-3,13,12);
-// fill(135);
-// ellipse(midX,midY-1,13,8)
 
 //-----------------------------------------------------------HIGHLIGHT-----------------------------
 
@@ -57,7 +47,6 @@ curveVertex(-sideRight/2-1,-1.6);//top right
 endShape(CLOSE);
 
 beginShape();//cheek left
-// vertex(-1,2);
 curveVertex(-1,1);
 curveVertex(-1.8,4);
 curveVertex((-sideRight/2)-4,0);
@@ -73,21 +62,6 @@ endShape(CLOSE);
 
 
 // --------------------SHADOWS-----------------------------MID-------------------------------
-fill(135);
-
-// beginShape();//top of head
-// vertex(-6.5,-2.3);
-// curveVertex(-6.5,-2.3);
-// curveVertex(-4.5,-7.5);
-// curveVertex(0,-8);
-// curveVertex(6.85,-2);
-// curveVertex(0,-6);
-// endShape(CLOSE);
-
-// strokeWeight(1);
-// stroke(80);
-// noFill();
-// arc(midX,midY-3,13,12,180,0,HALF);
 
 fill(midd);
 stroke(midd);
@@ -233,9 +207,6 @@ beginShape();//temple right___________________
   curveVertex(6.3,-4.5);
 endShape(CLOSE);
 
-beginShape();//top of the head FILL IN @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-endShape(CLOSE);
-
 beginShape();//mouf__________________
   curveVertex(-1,6.6);
   curveVertex(1,6.6);
@@ -245,24 +216,6 @@ beginShape();//mouf__________________
 endShape(CLOSE);
 
 
-//guideline points MAIN-----------------------------------------------------------------------
-// stroke(255,100,100);
-
-// beginShape(POINTS);
-// vertex(-7,-3);//top left
-// vertex(-6,6);
-// vertex(0,10);//chin
-// vertex(6,6);
-// vertex(7,-3);//top right
-// //secondary
-// vertex(0,0);//eyes
-// vertex(0,-5)
-// //shadow ones
-// vertex(-3,4);//hollower cheek ish left
-// vertex(3,4);//hollow cheek right
-// vertex(-2,9.5);//chin outline
-// vertex(0,5);
-// endShape(CLOSE);
 
 }
 

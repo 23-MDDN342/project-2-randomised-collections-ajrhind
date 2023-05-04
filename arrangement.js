@@ -63,15 +63,12 @@ function draw () {
           areTheyEvil = true;
         }
 
-      push();
+      push();//Face
         let place = map(sideRight,-1,1,15,85);//x
         let upsie = map(eyes,1.8,3,130,150);//y
         translate(place*10, upsie*2);
-          // map (sideRight, -1, 1, -30, 30 )
-          // draw light // the x value is the map the y is - 30 
 
         scale(w/25, h/25);
-        //function myFace(cheek,nose,eyes,temples,mouth,sideRight, evilness) {
         myFace(cheek,nose,eyes,temples,mouth,sideRight,areTheyEvil)
         pop();
         fill(20,80);
@@ -85,7 +82,6 @@ for(i=0; i<15; i++){//spotlight
     noStroke();
     fill(255,5);
     strokeWeight(10);
-    // triangle(480,-150,sides*3,500,sides*13,500);
     triangle(480,-150,leftSpot,500,rightSpot*1.5,500);
 
   } 
