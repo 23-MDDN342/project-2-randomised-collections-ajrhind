@@ -4,7 +4,7 @@ function myFace(cheek,nose,eyes,temples,mouth,sideRight, evilness) {
   let midX=0;
   let midY=0;
 
-  angleMode(DEGREES);
+  // angleMode(DEGREES);
 
 //colours
   let baseC = 115;
@@ -12,6 +12,8 @@ function myFace(cheek,nose,eyes,temples,mouth,sideRight, evilness) {
   let midd = 80;
   let dark = 60;
   let redEyes = color(171, 14, 3);
+
+
  
   //----------------------FACE---------------------------------------------------------------------
   strokeWeight(0.1);
