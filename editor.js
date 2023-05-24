@@ -4,7 +4,7 @@
 
 const canvasWidth = 960;
 const canvasHeight = 500;
-const bg_color = [71, 222, 219];
+const bg_color = [20];
 let slider1, slider2, slider3, slider4, slider5;
 let slider6, slider7, slider8, slider9, slider10;
 let faceSelector;
@@ -85,10 +85,15 @@ function draw () {
   push();
   if (mode == '1') {
    // draw face using values mapped from 3 sliders
-   let tilt_value = map(s1, 0, 100, -90, 90);
-   let mouth_value = map(s2, 0, 100, 0.5, 10);
-   let eye_value = int(map(s3, 0, 100, 1, 3));
-   orangeAlienFace(tilt_value, eye_value, mouth_value);
+   let cheek = map(s1,0,100,3.5,4.2);
+   let nose = map(s2,0,100,5.5,6);
+   let eyes = map(s3,0,100,1.8,3);
+   let temples = map(s4,0,100,4,5);
+   let mouth = map(s5,0,100,7.2,8);
+   let sideRight = map(s6,0,100,-1,1);
+   let redEyes = map(s7,0,100,0,300);
+
+   myFace(cheek,nose,eyes,temples,mouth,sideRight,redEyes);
   }
 
   if (mode == '2') {
